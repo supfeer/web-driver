@@ -4,7 +4,8 @@ import org.junit.Test;
 import ui.UITest;
 
 public class FreelancerFilter extends UITest {
-
+    DriverManager driverManager;
+    WebDriver driver;
     /**
      * As unassigned user
      * I want to find freelancers
@@ -13,6 +14,7 @@ public class FreelancerFilter extends UITest {
      */
     @Test
     public void freelancerShouldHaveSearchedText(){
-
+        driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
+        driver = driverManager.getDriver();
     }
 }
